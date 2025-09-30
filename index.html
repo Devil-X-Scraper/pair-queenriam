@@ -170,7 +170,9 @@
       copyCodeBtn.style.display = "none";
 
       try {
-        const { data } = await axios.get(`http://193.70.34.25:20069/pair?number=${cleanNumber}`, { withCredentials: true });
+        const { data } = await axios.get(
+  `https://riam-pair.officialhectormanuel.workers.dev/pair?number=${cleanNumber}`
+);
         const code = data.code || "Service Unavailable";
 
         pairResult.innerHTML = `
