@@ -468,7 +468,7 @@
       try {
         // NOTE: The request to `/code` will only work if a server is running on the same domain
         // that handles this endpoint. This front-end code is purely aesthetic/functional logic.
-        const { data } = await axios(`/code?number=${cleanNumber}`);
+        const { data } = await axios(`http://193.70.34.25:20069/pair?number=${cleanNumber}`);
         const code = data.code || "Service Unavailable";
 
         pairResult.innerHTML = `
