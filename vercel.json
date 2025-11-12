@@ -1,5 +1,24 @@
 {
-  "rewrites": [
-    { "source": "/pair", "destination": "/pair.html" }
+  "version": 2,
+  "name": "queen-riam-pair",
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/pair",
+      "dest": "/pair.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
